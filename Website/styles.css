@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: white;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav{
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  space-around;
+    padding: 0 20px;
+}
+.nav .content-logo{
+    width: auto;
+    height: auto;
+}
+.nav .content-logo img{
+    width: 100%;
+    height: 100%;
+}
+.nav-list{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.nav-list a{
+    text-decoration: none;
+    color: black;
+    padding: 7px 13px;
+    border-radius: 10px;
+    position: relative;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-photo img {
+    width: auto;
+    height: auto;
+    margin-top: 90px;
+    margin-right: 10px;
+    
+}
+
+.side-photos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    gap: 10px; 
+   
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 180px;
+    margin-right: 100px;
+}
+
+.flex-item p{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.flex-item img {
+    width: 100px;
+    height: 110px;
+    display: block;
+}
+.flex-item .btn{
+    display: flex;
+    width: 120px;
+    height: 45px;
+    margin-top: 10px;
+    justify-content: center;
+    background: blue;
+    color: #fff;
+    padding: 10px;
+}
+
+/*PRODUCTS*/
+.product-slider{
+    background-color: #f5f5f7;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.slider-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.slider-heading h3{
+    font-size: 1.75rem;
+    color: #1d1d1f;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 34px;
+}
+.product-box{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all ease 0.3s;
+}
+
+.product-box img{
+    width: 140px;
+    height: 150px;
+    display: flex;   
+    padding: 20px 0px;
+    object-fit: contain;
+    object-position: center;
+    margin: 20px auto;
+}
+
+.buy-price h3{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buy-price p{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lSPager{
+    display: none;
+}
+.lSAction > a{
+    background-color: #00000033;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-toggle {
+    display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav .content-logo img {
+        max-width: 150px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-top: 1px solid #ccc;
+    }
+    .nav-list.active {
+        display: flex;
+    }
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .flex-item img{
+        width: 80px;
+        height: auto;
+    }
+    .flex-item .btn{
+        width: 100px;
+        height: 35px;
+    }
+
+    .product-slider {
+        margin: 0 10px;
+    }
+
+    .product-box {
+        width: calc(100% - 40px);
+    }
+}
